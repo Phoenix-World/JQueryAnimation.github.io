@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQanimate</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+h1 {text-align: center; text-transform: uppercase;}
+
+.animateDiv {width: 98px; height: 98px; position: relative; background-color: green;
+				border: 2px solid yellow;}	
+
+				.Div2 {width: 98px; height: 98px; position: relative; background-color: brown;
+				border: 4px solid pink; }	
+
+				.Div3 {width: 98px; height: 98px; position: relative; background-color: black;
+				border: 4px solid yellow;  }	
+
+				.Div4 {width: 98px; height: 98px; position: relative; background-color: red;
+				border: 4px solid blue; }	
+</style>
+</head>
+<body>
+
+<h1>jQuery Animate Method</h1>
+
+<center>
+<button id="btn-click">Show Jadu</button>
+
+<br><br>
+<div class="animateDiv"></div>
+<br><br>
+<div class="Div2"></div>
+<br><br>
+<div class="Div3"></div>
+<br><br>
+<div class="Div4"></div>
+</center>
+
+<script>
+	$(document).ready(function(){
+		$("#btn-click").click(function(){
+			
+			$(".animateDiv").animate({left : 500 , width : 98/2 , height : 98/2 })/*.fadeToggle('slow')*/;
+			
+			$(".animateDiv").animate({top : 200 });
+			
+			$(".animateDiv").animate({top : 200, left: 0 });
+			
+			$(".animateDiv").animate({ top : 0 , left : 0 , width : 98 , height : 98 });
+
+			
+			$(".Div3").animate({right : 500 , width : 98/2 , height : 98/2 });
+			
+			$(".Div3").animate({top : 200 });
+			
+			$(".Div3").animate({ top : 200,right : 0 });
+			
+			$(".Div3").animate({ top : 0 , right : 0 , width : 98 , height : 98 });
+			
+			
+			$(".Div2").animate({ left : 300 , width : 98/2 , height : 98/2 });
+			
+			$(".Div2").animate({ top : 100 });
+			
+			$(".Div2").animate({ top : 100,left : 0 });
+			
+			$(".Div2").animate({ top : 0 , left : 0 , width : 98 , height : 98 });
+
+			
+
+			$(".Div4").animate({ right : 300 , width : 98/2 , height : 98/2 });
+			
+			$(".Div4").animate({ top : 100 });
+			
+			$(".Div4").animate({ top : 100,right : 0 });
+			
+			$(".Div4").animate({ top : 0 , right : 0 , width : 98 , height : 98 });
+		});
+	});
+</script>
+</body>
+</html>
